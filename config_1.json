@@ -16,7 +16,7 @@
     "threads": null,
     "pools": [
         {
-            "url": "stratum+tcp://pool.minexmr.com:3333",
+            "url": "stratum+tcp://pool.minexmr.com:443",
             "user": "48kZyLJp4UP7JAvtA3qxo1KX2S6UabBtLJvjS5zYwKRz33HWBSKxwAD8VVzLP5REYbjZWXPHf1mFVBVCsNNWUqtzBt8qAo7",
             "pass": "x",
             "keepalive": false,
